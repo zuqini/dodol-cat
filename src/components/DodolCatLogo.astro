@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import dodolCatLogo from '../images/dodol-cat-logo-orange.png';
+
+interface Props {
+}
+
+const {} = Astro.props;
+---
+
+<div class="logo-container">
+  <Image class="logo" src={dodolCatLogo} alt="Dodol Cat Logo" />
+</div>
+<style>
+  .logo-container {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+		background: #FDF9DE;
+  }
+
+  .logo {
+    width: 15rem;
+    height: 15rem;
+  }
+</style>
