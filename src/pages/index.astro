@@ -1,21 +1,43 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Row from "../components/Row.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-    <div>hello world</div>
-	</main>
+<Layout title="Welcome to DodolCat.">
+  <main>
+    <Row>
+      <div>
+        <div class="placeholder"></div>
+        extrovert for hire
+      </div>
+      <div>
+        <div class="placeholder"></div>
+        certified yapper for hire
+      </div>
+      <div>
+        <div class="placeholder"></div>
+        introvert for adoption
+      </div>
+    </Row>
+    <div>carousel of products? art?</div>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: #714F2C;
-		font-size: 20px;
-		line-height: 1.6;
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: #714f2c;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .placeholder {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 25%;
+    background: grey;
+  }
 </style>
