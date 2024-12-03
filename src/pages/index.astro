@@ -1,37 +1,71 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Row from "../components/Row.astro";
+
+import { Icon } from 'astro-icon/components'
 ---
 
 <Layout title="Welcome to DodolCat.">
   <main>
-    <Row>
-      <div>
-        <div class="placeholder"></div>
-        extrovert for hire
+    <div class="main-section">
+      <div class="row-section">
+        <Row>
+          <div class="placeholder-container">
+            <div class="placeholder"></div>
+            extrovert for hire
+          </div>
+          <div class="placeholder-container">
+            <div class="placeholder"></div>
+            certified yapper for hire
+          </div>
+          <div class="placeholder-container">
+            <div class="placeholder"></div>
+            introvert for adoption
+          </div>
+        </Row>
       </div>
-      <div>
-        <div class="placeholder"></div>
-        certified yapper for hire
-      </div>
-      <div>
-        <div class="placeholder"></div>
-        introvert for adoption
-      </div>
-    </Row>
-    <div>carousel of products? art?</div>
+      <div class="subtext">Beep Boop. Please come back later! This is still under construction.</div>
+    </div>
+    <div class="footer">
+      <a href="https://zuqili.com"><Icon name="instagram" /></a>
+        <a href="https://zuqili.com"><Icon name="tiktok" /></a>
+    </div>
   </main>
 </Layout>
 
 <style>
   main {
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 1rem;
     width: 800px;
+    height: auto;
     max-width: calc(100% - 2rem);
     color: #714f2c;
-    font-size: 20px;
+    font-size: 1.5rem;
     line-height: 1.6;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: auto;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 2rem;
+    margin: 1rem;
+  }
+
+  .placeholder-container {
+    width: 15rem;
   }
 
   .placeholder {
@@ -39,5 +73,16 @@ import Row from "../components/Row.astro";
     height: 10rem;
     border-radius: 25%;
     background: grey;
+  }
+
+  .row-section {
+    margin-bottom: 2rem;
+  }
+
+  .subtext {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
   }
 </style>
