@@ -1,34 +1,29 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "@/layouts/Layout.astro";
 import Row from "@/components/Row.astro";
 
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
+
+import imshy from "../images/side-art.png";
+import contactWin from "../images/contact-win.png";
+import speechBubble from "../images/speech-bubble.png";
 ---
 
 <Layout title="Welcome to DodolCat.">
   <main>
     <div class="main-section">
-      <div class="row-section">
-        <Row>
-          <div class="placeholder-container">
-            <div class="placeholder"></div>
-            extrovert for hire
-          </div>
-          <div class="placeholder-container">
-            <div class="placeholder"></div>
-            certified yapper for hire
-          </div>
-          <div class="placeholder-container">
-            <div class="placeholder"></div>
-            introvert for adoption
-          </div>
-        </Row>
-      </div>
-      <div class="subtext">Beep Boop. Please come back later! This is still under construction.</div>
+      <Row>
+      <Image src={imshy} alt="im shy" layout="responsive" width={600} />
+        <div>
+          <Image src={speechBubble} alt="im shy" layout="responsive" width={600}  />
+          <Image src={contactWin} alt="im shy" layout="responsive" width={600} />
+        </div>
+      </Row>
     </div>
     <div class="footer">
       <a href="https://zuqili.com"><Icon name="instagram" /></a>
-        <a href="https://zuqili.com"><Icon name="tiktok" /></a>
+      <a href="https://zuqili.com"><Icon name="tiktok" /></a>
     </div>
   </main>
 </Layout>
@@ -39,7 +34,7 @@ import { Icon } from 'astro-icon/components'
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    width: 800px;
+    width: auto;
     height: auto;
     max-width: calc(100% - 2rem);
     color: #714f2c;
@@ -62,27 +57,5 @@ import { Icon } from 'astro-icon/components'
     gap: 1rem;
     height: 2rem;
     margin: 1rem;
-  }
-
-  .placeholder-container {
-    width: 15rem;
-  }
-
-  .placeholder {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 25%;
-    background: grey;
-  }
-
-  .row-section {
-    margin-bottom: 2rem;
-  }
-
-  .subtext {
-    font-family: "Righteous", sans-serif;
-    font-weight: 400;
-    font-size: 2rem;
-    font-style: normal;
   }
 </style>
