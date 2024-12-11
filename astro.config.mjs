@@ -11,4 +11,5 @@ export default defineConfig({
   experimental: {
     responsiveImages: true,
   },
+  site: 'https://dodolcat.com',
 });
