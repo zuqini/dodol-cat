@@ -22,3 +22,12 @@
 .link-button:active {
     background: #e3e1c8;
 }
+
+@media (orientation: portrait) {
+    .link-button {
+        width: 5rem;
+        height: 2rem;
+        margin: 0.2rem;
+        border-radius: 0.25rem;
+    }
+}

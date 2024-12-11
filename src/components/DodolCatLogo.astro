@@ -1,27 +1,38 @@
 ---
-import { Image } from 'astro:assets';
-import dodolCatLogo from '../images/dodol-cat-logo-orange.png';
+import { Image } from "astro:assets";
+import dodolCatLogo from "../images/dodol-cat-logo-orange.png";
 
-interface Props {
-}
+interface Props {}
 
 const {} = Astro.props;
 ---
 
 <div class="logo-container">
-  <Image class="logo" src={dodolCatLogo} alt="Dodol Cat Logo" />
+  <Image class="logo" src={dodolCatLogo} alt="Dodol Cat Logo" layout="responsive" />
 </div>
 <style>
   .logo-container {
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
-		background: #FDF9DE;
+    background: #fdf9de;
     pointer-events: none;
   }
 
   .logo {
     width: 15rem;
     height: 15rem;
+  }
+
+  @media (orientation: portrait) {
+    .logo-container {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .logo {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 </style>

@@ -13,7 +13,7 @@ interface AccordionProps {
 const Accordion: React.FC<AccordionProps> = ({ title, items }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div >
+    <div className='accordion-container'>
       <a className='accordion-button' onClick={() => setIsOpen(!isOpen)}>
         {title}
       </a>
