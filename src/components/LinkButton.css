@@ -1,0 +1,24 @@
+.link-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 3rem;
+    margin: 0.5rem;
+
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    background: #fdfbdf;
+    color: #714f2c;
+
+    text-decoration: none;
+}
+
+.link-button:hover {
+    cursor: pointer;
+}
+
+.link-button:active {
+    background: #e3e1c8;
+}

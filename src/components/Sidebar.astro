@@ -1,21 +1,26 @@
 ---
-import DodolCatLogo from '../components/DodolCatLogo.astro';
-import Button from '../components/Button.astro';
+import DodolCatLogo from "@/components/DodolCatLogo.astro";
+import LinkButton from "@/components/LinkButton";
+import Accordion from "@/components/Accordion";
 
-interface Props {
-}
+interface Props {}
 
 const {} = Astro.props;
 ---
 
 <div class="side-bar">
   <DodolCatLogo />
-  <div class="titan-one logo-text">
-    Dodol Cat
-  </div>
-  <Button>Art</Button>
-  <Button>Info</Button>
-  <Button>Shop</Button>
+  <div class="titan-one logo-text">Dodol Cat</div>
+  <LinkButton href=".">Home</LinkButton>
+  <LinkButton href=".">Contact</LinkButton>
+  <Accordion
+    title="Shop"
+    items={[
+      { title: "Go to Threadless", href: "." },
+      { title: "Go to Threadless", href: "." },
+    ]}
+    client:load
+  />
 </div>
 <style>
   .side-bar {
@@ -25,7 +30,7 @@ const {} = Astro.props;
     width: 20rem;
     height: auto;
     padding: 2rem;
-    background: #FAAE35;
+    background: #faae35;
   }
   .logo-text {
     color: white;
