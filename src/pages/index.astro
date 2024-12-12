@@ -2,11 +2,11 @@
 import { Image } from "astro:assets";
 import Layout from "@/layouts/Layout.astro";
 import Row from "@/components/Row.astro";
+import ContactForm from "@/components/ContactForm.astro";
 
 import { Icon } from "astro-icon/components";
 
 import imshy from "../images/side-art.png";
-import contactWin from "../images/contact-win.png";
 import speechBubble from "../images/speech-bubble.png";
 ---
 
@@ -17,7 +17,7 @@ import speechBubble from "../images/speech-bubble.png";
       <Image src={imshy} alt="im shy" layout="responsive" width={600} />
         <div>
           <Image src={speechBubble} alt="im shy" layout="responsive" width={600}  />
-          <Image src={contactWin} alt="im shy" layout="responsive" width={600} />
+          <ContactForm />
         </div>
       </Row>
     </div>
